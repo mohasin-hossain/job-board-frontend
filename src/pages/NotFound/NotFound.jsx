@@ -1,9 +1,9 @@
-import React from 'react';
+import NotFoundImg from '../../assets/404.gif'
 
 const NotFound = () => {
     return (
-        <div>
-            NotFound
+        <div className='grid place-items-center'>
+            <img src={NotFoundImg} alt="" />
         </div>
     );
 };
