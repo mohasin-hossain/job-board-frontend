@@ -4,7 +4,6 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/Route";
 import { HelmetProvider } from "react-helmet-async";
-import AuthProvider from "./providers/AuthProvider";
 import {
   QueryClient,
   QueryClientProvider,
@@ -14,12 +13,10 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
       <QueryClientProvider client={queryClient}>
         <HelmetProvider>
           <RouterProvider router={router} />
         </HelmetProvider>
       </QueryClientProvider>
-    </AuthProvider>
   </React.StrictMode>
 );
