@@ -18,14 +18,16 @@ A job board application built with React, Tailwind CSS, and DaisyUI.
 - **DaisyUI**: Component library for Tailwind CSS
 - **Axios**: HTTP client for API communication
 - **React Router**: Client-side routing
+- **TanStack Query**: Data fetching and state management library
 
 ## Setup Instructions
 
 ### Prerequisites
 
-- Running backend server (Express/PostgreSQL) or (Express/MongoDB)
+- Running the backend server (Express/PostgreSQL) or (Express/MongoDB)
 
 ### Installation
+```
 
 1. Clone the repository:
 ```bash
