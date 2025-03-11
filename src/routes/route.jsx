@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/main";
-import Home from "../pages/Home/Home";
-import NotFound from "../pages/NotFound/NotFound";
-import CreateJob from "../pages/CreateJob/CreateJob";
-import Applications from "../pages/Applications/Applications";
+import Home from "../pages/AllJobs/AllJobsPage";
+import NotFound from "../pages/NotFound/NotFoundPage";
+import CreateJob from "../pages/CreateJob/CreateJobPage";
+import Applications from "../pages/Applications/ApplicationsPage";
 
 const router = createBrowserRouter([
   {
