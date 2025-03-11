@@ -25,9 +25,10 @@ A job board application built with React, Tailwind CSS, and DaisyUI.
 ### Prerequisites
 
 - Running the backend server (Express/PostgreSQL) or (Express/MongoDB)
+```
 
 ### Installation
-```
+
 
 1. Clone the repository:
 ```bash
