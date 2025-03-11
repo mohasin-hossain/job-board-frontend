@@ -4,6 +4,7 @@ import {
   FaBriefcase,
   FaPaperPlane,
   FaHashtag,
+  FaMapMarkerAlt, // Added for location
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -37,6 +38,10 @@ const JobCard = ({ job }) => {
 
         <div className="flex items-center gap-2 text-gray-500 text-sm">
           <FaBuilding className="text-gray-500" /> {job.company}
+        </div>
+
+        <div className="flex items-center gap-2 text-gray-500 text-sm">
+          <FaMapMarkerAlt className="text-gray-500" /> {job.location}
         </div>
 
         <div className="mt-4">
