@@ -9,6 +9,7 @@ import {
   FaBriefcase,
   FaUsers,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const JobDetailPage = () => {
   const { jobId } = useParams();
@@ -25,6 +26,9 @@ const JobDetailPage = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-8">
+      <Helmet>
+        <title>Job Details | Job Board</title>
+      </Helmet>
       <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
         <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
           <FaBriefcase className="text-gray-500" /> {job.title}
@@ -69,9 +73,7 @@ const JobDetailPage = () => {
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">
-          Apply Now!
-        </h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Apply Now!</h2>
         <ApplicationForm jobId={job.id || job._id} />
       </div>
     </div>

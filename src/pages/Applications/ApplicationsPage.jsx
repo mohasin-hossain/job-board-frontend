@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useApplications } from "../../hooks/useApplications";
 import { FaSearch } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const ApplicationsPage = () => {
   const [jobId, setJobId] = useState("");
@@ -33,6 +34,9 @@ const ApplicationsPage = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
+      <Helmet>
+        <title>Applications | Job Board</title>
+      </Helmet>
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="relative">
           <input
