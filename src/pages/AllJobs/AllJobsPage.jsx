@@ -1,11 +1,34 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+import { useJobs } from "../../hooks/useJobs";
+import JobList from "../../components/JobList";
 
-const Home = () => {
+const AllJobs = () => {
+  const { data: jobs, isLoading, error } = useJobs();
+
+  if (isLoading)
+    return <div className="mt-12 text-center">Loading jobs...</div>;
+
+  if (error)
     return (
-        <div>
-            Home
-        </div>
+      <div className="mt-12 text-center">
+        Error loading jobs: {error.message}
+      </div>
     );
+
+  return (
+    <div>
+      {jobs.length === 0 ? (
+        <div className="mt-12 flex justify-center items-center flex-col bg-base-200 p-6">
+          <p>No jobs available. Please create some jobs first.</p>
+          <Link to="/create-job" className="btn btn-primary mt-4">
+            Create Job
+          </Link>
+        </div>
+      ) : (
+        <JobList jobs={jobs} />
+      )}
+    </div>
+  );
 };
 
-export default Home;
+export default AllJobs;

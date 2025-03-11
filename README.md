@@ -1,12 +1,60 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# Job Board Frontend
 
-Currently, two official plugins are available:
+A job board application built with React, Tailwind CSS, and DaisyUI. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- View all available jobs with details
+- Create new job listings
+- Submit applications for jobs
+- View applications by job ID
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- **React**: Frontend framework
+- **Tailwind CSS**: Utility-first CSS framework
+- **DaisyUI**: Component library for Tailwind CSS
+- **Axios**: HTTP client for API communication
+- **React Router**: Client-side routing
+
+## Setup Instructions
+
+### Prerequisites
+
+- Running backend server (Express/PostgreSQL) or (Express/MongoDB)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/job-board-frontend.git
+cd job-board-frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Configure environment (create `.env` file if needed):
+```env
+VITE_API_URL=http://localhost:4000/api/v1
+```
+
+### Running the Application
+
+Start development server:
+```bash
+npm run dev
+```
+
+## API Endpoints Used
+
+The frontend expects these backend endpoints:
+- `GET /jobs` - Get all jobs
+- `GET /jobs/:id` - Get job details
+- `POST /jobs` - Create new job
+- `POST /applications` - Submit application
+- `GET /applications/:job_id` - Get applications by job ID
